@@ -217,6 +217,29 @@ body {
   font-size: 11px;
 }
 
+/* command result helpers */
+.err {
+  color: #c98f7f;
+}
+.kv {
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 4px 18px;
+  color: var(--fg-mid);
+}
+.kv .k {
+  color: var(--fg-dim);
+}
+.help-grid {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 7px 18px;
+  color: var(--fg-mid);
+}
+.help-grid .c {
+  color: var(--accent);
+}
+
 /* section header with box-drawing rule */
 .sec {
   display: flex;

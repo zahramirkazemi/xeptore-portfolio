@@ -18,3 +18,17 @@ export const HINTS = [
   ['education', 'degrees'],
   ['contact', 'reach me'],
 ] as [string, string][];
+
+
+export const ROWS = [
+  ['about', 'intro + summary'],
+  ['experience', `work history (${CV.experience.length} roles)`],
+  ['skills', 'capabilities by area'],
+  ['stack', 'tools & technologies'],
+  ['education', 'degrees + languages'],
+  ['stats', 'the numbers'],
+  ['contact', 'email · github · phone'],
+  ['all', 'print everything'],
+  ['clear', 'wipe the scrollback'],
+  ['help', 'this list'],
+] as [string, string][];
