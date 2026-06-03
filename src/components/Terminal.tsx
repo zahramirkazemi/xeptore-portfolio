@@ -1,5 +1,6 @@
-import { CV } from '../core/data.ts'
-import Clock from './Clock.tsx'
+
+import MainContent from './MainContent.tsx';
+import TitleBar from './TitleBar.tsx';
 
 export default function Terminal() {
   return (
@@ -10,30 +11,9 @@ export default function Terminal() {
       aria-label="Terminal portfolio"
     >
       <div className="frame">
-
-        {/* Title bar */}
-        <div className="titlebar" aria-label="Terminal title bar">
-          <span className="tb-dots" aria-hidden="true">
-            <i />
-            <i />
-            <i />
-          </span>
-          <span className="tb-path">
-            {CV.handle}@portfolio: <b>~/session</b>
-          </span>
-          <span className="tb-spacer" />
-          <span className="tb-stat">
-            exp:<b>timeline</b>
-          </span>
-          <span className="tb-live" aria-label="Status: online">
-            online
-          </span>
-          <span className="tb-stat" style={{ minWidth: 64, textAlign: 'right' }}>
-            <Clock />
-          </span>
-        </div>
+        <TitleBar />
+        <MainContent />
       </div>
     </div>
-
   )
 }
