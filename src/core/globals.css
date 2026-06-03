@@ -51,7 +51,6 @@ body {
   z-index: 1;
   height: 100dvh;
   display: flex;
-  align-items: center;
   flex-direction: column;
   padding: 14px;
 }
@@ -403,5 +402,55 @@ a:hover {
 @media (max-width: 640px) {
   .stats {
     grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* ===================== STACK MARQUEE ===================== */
+.marquee {
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: 0;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent,
+    #000 8%,
+    #000 92%,
+    transparent
+  );
+}
+.marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  animation: scrollx 38s linear infinite;
+}
+.marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+.marquee-item {
+  color: var(--fg-mid);
+  padding: 14px 22px;
+  white-space: nowrap;
+  border-right: 1px solid var(--border);
+  font-size: 14px;
+}
+.marquee-item .dot {
+  color: var(--fg-faint);
+  margin-right: 10px;
+}
+@keyframes scrollx {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
   }
 }
