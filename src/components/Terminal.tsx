@@ -1,4 +1,5 @@
 import { CV } from '../core/data.ts'
+import Clock from './Clock.tsx'
 
 export default function Terminal() {
   return (
@@ -26,6 +27,9 @@ export default function Terminal() {
           </span>
           <span className="tb-live" aria-label="Status: online">
             online
+          </span>
+          <span className="tb-stat" style={{ minWidth: 64, textAlign: 'right' }}>
+            <Clock />
           </span>
         </div>
       </div>
