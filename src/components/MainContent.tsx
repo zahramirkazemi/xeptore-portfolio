@@ -2,7 +2,8 @@ import { useEffect, useRef, useState } from 'react';
 
 import { BOOT_LINES } from '../core/constants.ts';
 
-import Boot from './Boot.tsx';
+import BootLoading from './BootLoading.tsx';
+import Hero from './commands/Hero.tsx';
 
 export default function MainContent() {
   const [booting, setBooting] = useState(true)
@@ -32,7 +33,8 @@ export default function MainContent() {
       aria-live="polite"
       aria-label="Terminal output"
     >
-      <Boot booting={booting} bootShown={bootShown} />
+      <BootLoading booting={booting} bootShown={bootShown} />
+      <Hero />
     </div>
   )
 }

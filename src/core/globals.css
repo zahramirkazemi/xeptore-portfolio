@@ -163,3 +163,191 @@ body {
     opacity: 1;
   }
 }
+
+/* ---- viewport ---- */
+.viewport {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 22px 26px 8px;
+  scroll-behavior: smooth;
+}
+.viewport::-webkit-scrollbar {
+  width: 10px;
+}
+.viewport::-webkit-scrollbar-track {
+  background: transparent;
+}
+.viewport::-webkit-scrollbar-thumb {
+  background: var(--border-2);
+  border: 3px solid var(--bg);
+  border-radius: 10px;
+}
+.viewport::-webkit-scrollbar-thumb:hover {
+  background: #4a4340;
+}
+
+.block {
+  margin: 0 0 26px;
+  max-width: 980px;
+}
+.block:last-child {
+  margin-bottom: 30px;
+}
+
+/* command echo line */
+.echo {
+  color: var(--fg-dim);
+  margin-bottom: 12px;
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.echo .pr {
+  color: var(--accent-dim);
+}
+.echo .cmd {
+  color: var(--fg);
+}
+.echo .tstamp {
+  margin-left: auto;
+  color: var(--fg-faint);
+  font-size: 11px;
+}
+
+/* section header with box-drawing rule */
+.sec {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 16px;
+  color: var(--fg-dim);
+  font-size: 12px;
+}
+.sec .tag {
+  color: var(--accent);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.sec .rule {
+  flex: 1;
+  height: 0;
+  border-top: 1px dashed var(--border-2);
+}
+.sec .fig {
+  color: var(--fg-faint);
+  letter-spacing: 0.1em;
+}
+
+/* generic text */
+.muted {
+  color: var(--fg-mid);
+}
+.dim {
+  color: var(--fg-dim);
+}
+.faint {
+  color: var(--fg-faint);
+}
+.hl {
+  color: var(--fg);
+}
+.lead {
+  color: var(--fg-mid);
+  max-width: 70ch;
+  line-height: 1.85;
+}
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid var(--border-2);
+}
+a:hover {
+  color: #fff;
+  border-color: var(--accent-dim);
+}
+
+/* ===================== HERO ===================== */
+.hero {
+  padding: 6px 0 4px;
+}
+.hero .wm {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  line-height: 1;
+  font-size: clamp(40px, 9vw, 104px);
+  color: var(--fg);
+  display: flex;
+  align-items: baseline;
+  gap: 0;
+}
+.hero .wm .caret {
+  color: var(--accent-dim);
+  font-weight: 400;
+  margin-right: 4px;
+}
+.hero .wm .blink {
+  animation: blink 1.1s steps(1) infinite;
+  color: var(--accent-dim);
+}
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+.hero .sub {
+  margin-top: 14px;
+  color: var(--fg-mid);
+  font-size: clamp(13px, 1.6vw, 16px);
+}
+.hero .sub b {
+  color: var(--fg);
+  font-weight: 500;
+}
+.hero .tag2 {
+  margin-top: 22px;
+  font-size: clamp(15px, 2.1vw, 22px);
+  color: var(--fg);
+  max-width: 30ch;
+  line-height: 1.5;
+}
+.hero .id-row {
+  margin-top: 26px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 22px;
+  color: var(--fg-dim);
+  font-size: 12.5px;
+}
+.hero .id-row span b {
+  color: var(--fg-mid);
+  font-weight: 500;
+}
+
+/* hint chips under hero */
+.hints {
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.hint-chip {
+  border: 1px solid var(--border-2);
+  background: var(--panel);
+  color: var(--fg-mid);
+  padding: 6px 12px;
+  cursor: pointer;
+  font: inherit;
+  font-size: 12px;
+  transition: 0.14s;
+}
+.hint-chip:hover {
+  border-color: var(--accent-dim);
+  color: var(--fg);
+  background: var(--panel-2);
+}
+.hint-chip .k {
+  color: var(--accent);
+}

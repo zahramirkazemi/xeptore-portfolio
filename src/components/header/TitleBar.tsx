@@ -1,4 +1,4 @@
-import { CV } from '../core/data.ts';
+import { CV } from '../../core/data.ts';
 import Clock from './Clock.tsx';
 
 

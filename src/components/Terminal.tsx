@@ -1,6 +1,6 @@
 
 import MainContent from './MainContent.tsx';
-import TitleBar from './TitleBar.tsx';
+import TitleBar from './header/TitleBar.tsx';
 
 export default function Terminal() {
   return (
