@@ -374,3 +374,34 @@ a:hover {
 .hint-chip .k {
   color: var(--accent);
 }
+
+/* ===================== STATS ===================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  background: var(--border);
+  border: 1px solid var(--border);
+}
+.stat {
+  background: var(--bg-1);
+  padding: 18px 18px;
+}
+.stat .v {
+  font-size: clamp(26px, 4vw, 40px);
+  color: var(--fg);
+  font-weight: 600;
+  line-height: 1;
+}
+.stat .k {
+  margin-top: 8px;
+  color: var(--fg-dim);
+  font-size: 11.5px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+@media (max-width: 640px) {
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
