@@ -3,8 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { BOOT_LINES } from '../core/constants.ts';
 
 import BootLoading from './BootLoading.tsx';
-import Stack from './commands/Stack.tsx';
-import Skills from './commands/Skills.tsx';
+import About from './commands/About.tsx';
 
 export default function MainContent() {
   const [booting, setBooting] = useState(true)
@@ -35,7 +34,7 @@ export default function MainContent() {
       aria-label="Terminal output"
     >
       <BootLoading booting={booting} bootShown={bootShown} />
-      <Skills />
+      <About />
     </div>
   )
 }
