@@ -4,6 +4,7 @@ import { BOOT_LINES } from '../core/constants.ts';
 
 import BootLoading from './BootLoading.tsx';
 import About from './commands/About.tsx';
+import Experience from './commands/Experience.tsx';
 
 export default function MainContent() {
   const [booting, setBooting] = useState(true)
@@ -35,6 +36,7 @@ export default function MainContent() {
     >
       <BootLoading booting={booting} bootShown={bootShown} />
       <About />
+      <Experience />
     </div>
   )
 }
