@@ -755,6 +755,8 @@ a:hover {
   flex: 1;
   display: flex;
   min-width: 0;
+  flex-direction: row-reverse;
+  align-items: center;
 }
 .inputline input {
   flex: 1;

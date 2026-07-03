@@ -1,7 +1,7 @@
 import { HINTS } from '../../core/constants.ts'
 import { CV } from '../../core/data.ts'
 
-export default function Hero() {
+export default function Hero({ onRun }: { onRun: (cmd: string) => void }) {
   return (
     <div className="hero">
       <div className="wm" aria-label={`${CV.handle} — terminal portfolio`}>
@@ -17,7 +17,7 @@ export default function Hero() {
       </div>
       <nav className="hints" aria-label="Quick navigation">
         {HINTS.map(([command, description]) => (
-          <button className="hint-chip" key={command} aria-label={`Run ${command}: ${description}`}>
+          <button className="hint-chip" key={command} onClick={() => onRun(command)} aria-label={`Run ${command}: ${description}`}>
             <span className="k">{command}</span> <span className="faint">— {description}</span>
           </button>
         ))}
